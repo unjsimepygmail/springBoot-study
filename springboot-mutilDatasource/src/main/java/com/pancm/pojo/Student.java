@@ -1,6 +1,8 @@
 package com.pancm.pojo;
 
 
+import java.util.Objects;
+
 /**
  * 
 * @Title: Student
@@ -60,6 +62,16 @@ public class Student {
 	public void setAge(Integer age) {
 		this.age = age;
 	}
-	
-	
+
+
+	public boolean equals(Student obj) {
+		System.out.println(obj.getId());
+		System.out.println(this.getId());
+
+		if(Objects.nonNull(obj)&&(obj.getId().compareTo(this.getId())==0))
+		{
+			return true;
+		}
+		return false;
+	}
 }
